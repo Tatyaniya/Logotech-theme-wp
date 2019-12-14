@@ -332,8 +332,8 @@ function logotech_register_custom_post_type() {
 
     register_post_type( 'woman', array(
         'labels'             => array(
-            'name'                  => 'Shop woman',
-            'singular_name'         => 'Shop woman',
+            'name'                  => 'For Her',
+            'singular_name'         => 'For Her',
             'add_new'               => 'Add new',
         ),
         'public'             => true,
@@ -352,8 +352,8 @@ function logotech_register_custom_post_type() {
 
     register_post_type( 'man', array(
         'labels'             => array(
-            'name'                  => 'Shop man',
-            'singular_name'         => 'Shop man',
+            'name'                  => 'For Him',
+            'singular_name'         => 'For Him',
             'add_new'               => 'Add new',
         ),
         'public'             => true,
@@ -463,7 +463,282 @@ function aletheme_metaboxes($meta_boxes) {
             ),      
         )
     );
-   
+
+    $meta_boxes[] = array(
+        'id'         => 'drones_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'drones', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'drones_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'drones_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'drones_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'drones_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'drones_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'drones_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'drones_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'serurity_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'serurity', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'serurity_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'serurity_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'serurity_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'serurity_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'serurity_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'serurity_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'serurity_new',
+                'type' => 'text',
+            ),      
+        )
+    ); 
+    
+    $meta_boxes[] = array(
+        'id'         => 'smartphone_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'smartphone', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'smartphone_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'smartphone_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'smartphone_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'smartphone_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'smartphone_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'smartphone_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'smartphone_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'headphones_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'headphones', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'headphones_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'headphones_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'headphones_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'headphones_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'headphones_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'headphones_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'headphones_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'woman_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'woman', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'woman_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'woman_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'woman_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'woman_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'woman_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'woman_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'woman_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'man_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'man', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'man_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'man_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'man_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'man_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'man_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'man_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'man_new',
+                'type' => 'text',
+            ),      
+        )
+    );
         
 	return $meta_boxes;
 }

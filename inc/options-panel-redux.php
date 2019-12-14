@@ -577,6 +577,42 @@
                 'title'    => 'New product',
                 'default'  => ''
             ),
+            array(
+                'id'       => 'title3',
+                'type'     => 'text',
+                'title'    => 'Drones',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'title4',
+                'type'     => 'text',
+                'title'    => 'Home serurity',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'title5',
+                'type'     => 'text',
+                'title'    => 'Smartphones',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'title6',
+                'type'     => 'text',
+                'title'    => 'Headphones',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'title7',
+                'type'     => 'text',
+                'title'    => 'For Her',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'title8',
+                'type'     => 'text',
+                'title'    => 'For Him',
+                'default'  => ''
+            ),
         )
     ) );
 

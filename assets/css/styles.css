@@ -321,6 +321,18 @@ img {
   height: auto;
 }
 
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.055em;
+    color: #000;
+}
+  
+.wrap {
+    width: 100%;
+}
+
 .container {
   max-width: 1545px;
   margin: 0 auto;
@@ -329,16 +341,8 @@ img {
   overflow-X: hidden;
 }
 
-body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 0.055em;
-  color: #000;
-}
-
-.wrap {
-  width: 100%;
+.new__content {
+    padding-top: 90px;
 }
 
 .sg-row {

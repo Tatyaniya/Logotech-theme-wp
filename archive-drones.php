@@ -8,249 +8,82 @@ get_header();
     <div class="container new__container">
         <div class="new__content">
             <h2 class="new__title">
-                New product
+                <?php echo $logotech_options['title3']; ?>
             </h2>
             <ul class="product__list new-list">
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p1.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p2.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p3.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/4.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p4.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/3.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p1.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/2.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p2.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/1.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p3.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/0.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p4.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 60,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
+
+                <?php $drones = new WP_Query( array(
+                        'post_type' => 'drones',
+                        'posts_per_page'=> -1
+                    ));
+                    if ( $drones->have_posts() ) :
+                        while ( $drones->have_posts() ) :  $drones->the_post(); ?>
+
+                            <li class="product__item">
+                                <ul class="bestseller__stocks">
+
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_drones_best',true)) { ?>
+                                        <li class="bestseller__best">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_drones_best',true); ?>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_drones_save',true)) { ?>
+                                        <li class="bestseller__stoc">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_drones_save',true); ?>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_drones_nouv',true)) { ?>
+                                        <li class="bestseller__nouv">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_drones_nouv',true); ?>
+                                        </li>
+                                    <?php } ?>
+
+                                </ul>
+                                <div class="product__img">
+                                    <?php echo get_the_post_thumbnail(get_the_ID(), 'card-thumb'); ?>
+                                </div>
+                                <div class="product__description">
+                                    <?php the_title(); ?>   
+                                </div>
+                                <?php if(get_metadata('post', get_the_ID(),'logo_drones_rate',true)) { ?>
+                                    <div class="product__rating">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo get_metadata('post', get_the_ID(),'logo_drones_rate',true); ?>.png" alt="rating">
+                                    </div>
+                                <?php } ?>
+                                <?php if(get_metadata('post', get_the_ID(),'logo_drones_avi',true)) { ?>
+                                    <div class="aveilable  product__aveilable">
+                                        <div class="aveilable__icon">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ok.png" alt="ok">
+                                        </div>
+                                        <div class="aveilable__text">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_drones_avi',true); ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                                <div class="product__old-cost">
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_drones_old',true)) { ?>
+                                        <?php echo get_metadata('post', get_the_ID(),'logo_drones_old',true); ?>
+                                    <?php } ?>
+                                </div>
+                                <div class="product__down">
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_drones_new',true)) { ?>
+                                        <div class="product__cost">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_drones_new',true); ?>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="product__link">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        <?php endwhile;
+                        
+                        wp_reset_postdata();
+                        
+                    endif;
+                ?>
+              
             </ul>
         </div>
     </div>
