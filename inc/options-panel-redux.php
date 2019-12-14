@@ -652,52 +652,110 @@
     // Услуги
 
     Redux::setSection( $opt_name, array(
-        'title'            => 'Услуги',
-        'id'               => 'services',
+        'title'            => 'Футер',
+        'id'               => 'footer',
         'customizer_width' => '400px',
         'icon'             => 'el el-edit'
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'            => 'Диагностика',
-        'id'               => 'diagnostic',
+        'title'            => 'Контакты',
+        'id'               => 'contacts',
         'subsection'       => true,
         'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
+        'desc'             => 'Редактирование блока с контактами',
         'fields'           => array(
             array(
-                'id'       => 'titlediag',
+                'id'       => 'titlecontact',
                 'type'     => 'text',
                 'title'    => 'Заголовок',
-                'default'  => 'Диагностика'
+                'default'  => ''
             ),
             array(
-                'id'       => 'descdiag',
-                'type'     => 'editor',
-                'title'    => 'Описание',
+                'id'       => 'logomail',
+                'type'     => 'text',
+                'title'    => 'E-mail',
+                'validate' => 'email',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'address',
+                'type'     => 'text',
+                'title'    => 'Адрес',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'phone',
+                'type'     => 'text',
+                'title'    => 'Телефон',
                 'default'  => ''
             ),
         )
     ) );
 
-
     Redux::setSection( $opt_name, array(
-        'title'            => 'Хирургия',
-        'id'               => 'surgery',
+        'title'            => 'Социальные сети',
+        'id'               => 'social',
         'subsection'       => true,
         'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
+        'desc'             => 'Редактирование блока социальных сетей',
         'fields'           => array(
             array(
-                'id'       => 'titlesur',
+                'id'       => 'titlesocial',
                 'type'     => 'text',
                 'title'    => 'Заголовок',
-                'default'  => 'Хирургия'
+                'default'  => ''
             ),
             array(
-                'id'       => 'descsur',
-                'type'     => 'editor',
-                'title'    => 'Описание',
+                'id'       => 'youtube',
+                'type'     => 'text',
+                'title'    => 'Youtube текст',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'youtubelink',
+                'type'     => 'text',
+                'title'    => 'Youtube ссылка',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'instagram',
+                'type'     => 'text',
+                'title'    => 'Instagram текст',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'instagramlink',
+                'type'     => 'text',
+                'title'    => 'Instagram ссылка',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'facebook',
+                'type'     => 'text',
+                'title'    => 'Facebook текст',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'facebooklink',
+                'type'     => 'text',
+                'title'    => 'Facebook ссылка',
+                'default'  => ''
+            ),
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'            => 'Категории',
+        'id'               => 'productfooter',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'desc'             => 'Редактирование блока социальных сетей',
+        'fields'           => array(
+            array(
+                'id'       => 'titleproduct',
+                'type'     => 'text',
+                'title'    => 'Заголовок',
                 'default'  => ''
             ),
         )

@@ -254,7 +254,7 @@
                         <div class="woman__subtitle">
                             <?php echo $logotech_options['forwoman']; ?>
                         </div>
-                        <a href="#" class="woman__link links">
+                        <a href="<?php echo get_option("siteurl"); ?>/woman/" class="woman__link links">
                             <?php echo $logotech_options['forwomanlink']; ?>
                         </a>
                     </div>
@@ -353,7 +353,7 @@
                         <div class="man__subtitle">
                             <?php echo $logotech_options['forman']; ?>
                         </div>
-                        <a href="#" class="man__link links">
+                        <a href="<?php echo get_option("siteurl"); ?>/man/" class="man__link links">
                             <?php echo $logotech_options['formanlink']; ?>
                         </a>
                     </div>

@@ -9,6 +9,8 @@
  * @package logotech2
  */
 
+global $logotech_options;
+
 ?>
 
     <section class="subscribe">
@@ -30,53 +32,69 @@
         <div class="container footer__container">
             <div class="footer__content">
                 <div class="footer__box">
-                    <h4 class="footer__title">
-                        CONTACT US
-                    </h4>
+                    <?php if($logotech_options['titlecontact']) { ?>
+                        <h4 class="footer__title">
+                            <?php echo $logotech_options['titlecontact']; ?>
+                        </h4>
+                    <?php } ?>
                     <ul class="footer__list">
-                        <li class="footer__item">
-                            <div class="mail">
-                                <div class="mail__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt="mail">
+
+                        <?php if($logotech_options['logomail']) { ?>
+                            <li class="footer__item">
+                                <div class="mail">
+                                    <div class="mail__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt="mail">
+                                    </div>
+                                    <a href="mailto:<?php echo $logotech_options['logomail']; ?>" class="mail__text">
+                                        <?php echo $logotech_options['logomail']; ?>
+                                    </a>
                                 </div>
-                                <a href="mailto:demo@demo.com" class="mail__text">
-                                    demo@demo.com
-                                </a>
-                            </div>
-                        </li>
-                        <li class="footer__item">
-                            <address class="address">
-                                <div class="address__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/addr.png" alt="address">
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['address']) { ?>
+                            <li class="footer__item">
+                                <address class="address">
+                                    <div class="address__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/addr.png" alt="address">
+                                    </div>
+                                    <div class="address__text">
+                                        <?php echo $logotech_options['address']; ?>
+                                    </div>
+                                </address>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['phone']) { ?>
+                            <li class="footer__item">
+                                <div class="phone">
+                                    <div class="phone__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.png" alt="phone">
+                                    </div>
+                                    <a href="tel:<?php echo $logotech_options['phone']; ?>" class="phone__text">
+                                        <?php echo $logotech_options['phone']; ?>
+                                    </a>
                                 </div>
-                                <div class="address__text">
-                                    Belgia Brussell
-                                </div>
-                            </address>
-                        </li>
-                        <li class="footer__item">
-                            <div class="phone">
-                                <div class="phone__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.png" alt="phone">
-                                </div>
-                                <a href="tel:0123456 7890" class="phone__text">
-                                    0123456 7890
-                                </a>
-                            </div>
-                        </li>
+                            </li>
+                        <?php } ?>
+
                     </ul>
                 </div>
                 <div class="footer__box">
-                    <h4 class="footer__title">
-                        SOCIAL MEDIA
-                    </h4>
+
+                    <?php if($logotech_options['titlesocial']) { ?>
+                        <h4 class="footer__title">
+                            <?php echo $logotech_options['titlesocial']; ?>
+                        </h4>
+                    <?php } ?>
+                    
                     <ul class="footer__list">
                         <li class="footer__item">
                             <div class="social">
                                 <div class="social__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.png" alt="youtube">
                                 </div>
-                                <a href="#" class="social__text">
+                                <a href="#" class="social__text" target="_blank">
                                     youtube
                                 </a>
                             </div>
@@ -86,7 +104,7 @@
                                 <div class="social__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="instagram">
                                 </div>
-                                <a href="#" class="social__text">
+                                <a href="#" class="social__text" target="_blank">
                                     instagram
                                 </a>
                             </div>
@@ -96,7 +114,7 @@
                                 <div class="social__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.png" alt="facebook">
                                 </div>
-                                <a href="#" class="social__text">
+                                <a href="#" class="social__text" target="_blank">
                                     facebook
                                 </a>
                             </div>
@@ -105,34 +123,45 @@
                 </div>
 
                 <div class="footer__box">
-                    <h4 class="footer__title">
-                        PRODUCT  
-                    </h4>
+
+                    <?php if($logotech_options['titleproduct']) { ?>
+                        <h4 class="footer__title">
+                            <?php echo $logotech_options['titleproduct']; ?>
+                        </h4>
+                    <?php } ?>
+
                     <ul class="footer__list  footerMenu">
                         <li>
-                            <a href="#">
-                                Drones                   
+                            <a href="<?php echo get_option("siteurl"); ?>/drones/">
+                                <?php echo $logotech_options['drones']; ?>              
                             </a>
                         </li>
                         <li>
-                            <a href="#"> 
-                                Home serurity                   
+                            <a href="<?php echo get_option("siteurl"); ?>/serurity/"> 
+                                <?php echo $logotech_options['serurity']; ?>             
                             </a>
                         </li>
                         <li>
-                            <a href="#">   
-                                Smart Hone                  
+                            <a href="<?php echo get_option("siteurl"); ?>/smartphone/">   
+                                <?php echo $logotech_options['smarthpones']; ?>               
                             </a>
                         </li>
                         <li>
-                            <a href="#">  
-                                Headphones                   
+                            <a href="<?php echo get_option("siteurl"); ?>/headphones/">  
+                                <?php echo $logotech_options['headphones']; ?>                 
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="footer__box">
+
+                    <?php if($logotech_options['titlecontact']) { ?>
+                        <h4 class="footer__title">
+                            <?php echo $logotech_options['titlecontact']; ?>
+                        </h4>
+                    <?php } ?>
+
                     <h4 class="footer__title">
                         PAYMENT
                     </h4>
