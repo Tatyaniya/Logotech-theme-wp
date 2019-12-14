@@ -285,6 +285,7 @@
         'icon'             => 'el el-cogs'
     ) );
 
+    // Шапка
     Redux::setSection( $opt_name, array(
         'title'            => 'Шапка',
         'id'               => 'headerlogo',
@@ -344,6 +345,7 @@
         )
     ) );
 
+    // Первый экран
     Redux::setSection( $opt_name, array(
         'title'            => 'Первый экран',
         'id'               => 'offer-title',
@@ -383,75 +385,229 @@
         )
     ) );
 
+    // Преимущества
     Redux::setSection( $opt_name, array(
-        'title'            => 'Введите почту',
-        'id'               => 'Email',
+        'title'            => 'Преимущества',
+        'id'               => 'excellenceall',
         'subsection'       => true,
         'customizer_width' => '450px',
         'fields'           => array(
             array(
-                'id'       => 'mail',
+                'id'       => 'excellenceimg1',
+                'type'     => 'media',
+                'title'    => 'Иконка 1',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellencetext1',
                 'type'     => 'text',
-                'title'    => 'E-mail',
-                'validate' => 'email',
+                'title'    => 'Текст 1',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellenceimg2',
+                'type'     => 'media',
+                'title'    => 'Иконка 2',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellencetext2',
+                'type'     => 'text',
+                'title'    => 'Текст 2',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellenceimg3',
+                'type'     => 'media',
+                'title'    => 'Иконка 3',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellencetext3',
+                'type'     => 'text',
+                'title'    => 'Текст 3',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellenceimg4',
+                'type'     => 'media',
+                'title'    => 'Иконка 4',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'excellencetext4',
+                'type'     => 'text',
+                'title'    => 'Текст 4',
                 'default'  => ''
             ),
         )
     ) );
 
-    // Главная страница
-
+    // Баннеры
     Redux::setSection( $opt_name, array(
-        'title'            => 'Главная страница',
-        'id'               => 'homepage',
-        'customizer_width' => '400px',
-        'icon'             => 'el el-home'
+        'title'            => 'Баннеры',
+        'id'               => 'banners',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'fields'           => array(
+            array(
+                'id'       => 'banner1',
+                'type'     => 'media',
+                'title'    => 'Баннер 1',
+                'desc'     => 'Загрузите картинку размером не меньше 720х475',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'banner2',
+                'type'     => 'media',
+                'title'    => 'Баннер 2',
+                'desc'     => 'Загрузите картинку размером не меньше 720х475',
+                'default'  => ''
+            ),
+        )
     ) );
+
+
+    // Популярные категории
+    Redux::setSection( $opt_name, array(
+        'title'            => 'Популярные категории',
+        'id'               => 'popularcat',
+        'customizer_width' => '400px',
+        'icon'             => 'el el-asl',
+        'fields'           => array(
+            array(
+                'id'       => 'titlepop',
+                'type'     => 'text',
+                'title'    => 'Главный заголовок секции',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'popimg1',
+                'type'     => 'media',
+                'title'    => 'Картинка категории 1',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptitle1',
+                'type'     => 'text',
+                'title'    => 'Заголовок категории 1',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptext1',
+                'type'     => 'editor',
+                'title'    => 'Описание 1',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'popimg2',
+                'type'     => 'media',
+                'title'    => 'Картинка категории 2',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptitle2',
+                'type'     => 'text',
+                'title'    => 'Заголовок категории 2',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptext2',
+                'type'     => 'editor',
+                'title'    => 'Описание 2',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'popimg3',
+                'type'     => 'media',
+                'title'    => 'Картинка категории 3',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptitle3',
+                'type'     => 'text',
+                'title'    => 'Заголовок категории 3',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptext3',
+                'type'     => 'editor',
+                'title'    => 'Описание 3',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'popimg4',
+                'type'     => 'media',
+                'title'    => 'Картинка категории 4',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptitle4',
+                'type'     => 'text',
+                'title'    => 'Заголовок категории 4',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'poptext4',
+                'type'     => 'editor',
+                'title'    => 'Описание 4',
+                'default'  => ''
+            ),
+        )
+    ) );
+
+
 
     Redux::setSection( $opt_name, array(
         'title'            => 'Заголовки',
         'id'               => 'titles',
-        'subsection'       => true,
+        //'subsection'       => true,
         'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовки на главной странице',
+        'icon'             => 'el el-pencil',
         'fields'           => array(
             array(
                 'id'       => 'title1',
                 'type'     => 'text',
-                'title'    => 'Заголовок в первой секции',
-                'default'  => 'Мы позаботимся<br> о ваших питомцах'
+                'title'    => 'Bestseller',
+                'default'  => ''
             ),
             array(
-                'id'       => 'titleservice',
+                'id'       => 'title2',
                 'type'     => 'text',
-                'title'    => 'Заголовок секции "Услуги"',
-                'default'  => 'Услуги'
-            ),
-            array(
-                'id'       => 'titleabout',
-                'type'     => 'text',
-                'title'    => 'Заголовок секции "О нас"',
-                'default'  => 'О нас'
-            ),
-            array(
-                'id'       => 'titlepersonnel',
-                'type'     => 'text',
-                'title'    => 'Заголовок секции "Персонал"',
-                'default'  => 'Персонал'
+                'title'    => 'New product',
+                'default'  => ''
             ),
         )
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'            => 'Фото в секции "Онас"',
-        'id'               => 'collectivephoto',
-        'subsection'       => true,
+        'title'            => 'Для женщин и мужчин',
+        'id'               => 'womanman',
         'customizer_width' => '450px',
+        'icon'             => 'el el-adult',
         'fields'           => array(
             array(
-                'id'       => 'collective',
-                'type'     => 'media',
-                'title'    => 'Добавьте фотографию размером не меньше 468х388px',
+                'id'       => 'forwoman',
+                'type'     => 'text',
+                'title'    => 'Добавьте описание для женщин',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'forwomanlink',
+                'type'     => 'text',
+                'title'    => 'Текст кнопки',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'forman',
+                'type'     => 'text',
+                'title'    => 'Добавьте описание для мужчин',
+                'default'  => ''
+            ),
+            array(
+                'id'       => 'formanlink',
+                'type'     => 'text',
+                'title'    => 'Текст кнопки',
                 'default'  => ''
             ),
         )
@@ -488,27 +644,6 @@
         )
     ) );
 
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Терапия',
-        'id'               => 'therapy',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titlether',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Терапия'
-            ),
-            array(
-                'id'       => 'descther',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => ''
-            ),
-        )
-    ) );
 
     Redux::setSection( $opt_name, array(
         'title'            => 'Хирургия',
@@ -532,137 +667,6 @@
         )
     ) );
 
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Вакцинация',
-        'id'               => 'vaccination',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titlevacc',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Вакцинация'
-            ),
-            array(
-                'id'       => 'descvacc',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => ''
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Стоматология',
-        'id'               => 'dentistry',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titledent',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Стоматология'
-            ),
-            array(
-                'id'       => 'descdent',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => ''
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Груминг',
-        'id'               => 'gruming',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titlegrum',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Груминг'
-            ),
-            array(
-                'id'       => 'descgrum',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => ''
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Стационар',
-        'id'               => 'hospital',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titlehosp',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Стационар'
-            ),
-            array(
-                'id'       => 'deschosp',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => ''
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Ветаптека',
-        'id'               => 'pharmacy',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titlepharm',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Ветаптека'
-            ),
-            array(
-                'id'       => 'descpharm',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => 'Ветеринарная аптека нашей клиники предлагает весь спектр препаратов для профилактики и лечения различных заболеваний ваших питомцев. Здесь вы можете купить : средства от паразитов, лечебные шампуни, антибиотики, витамины, лечебный корм и заменители сучьего молока, средства для обработки ран, сыворотки и вакцины от инфекционных заболеваний. Вся продукция получена только от проверенных поставщиков и сертифицирована. Также есть возможность предварительно заказать ветеринарные препараты.'
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Зоомагазин',
-        'id'               => 'shop',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'desc'             => 'Здесь вы можете изменить заголовок и добавить описание',
-        'fields'           => array(
-            array(
-                'id'       => 'titleshop',
-                'type'     => 'text',
-                'title'    => 'Заголовок',
-                'default'  => 'Зоомагазин'
-            ),
-            array(
-                'id'       => 'descshop',
-                'type'     => 'editor',
-                'title'    => 'Описание',
-                'default'  => 'В нашем зоомагазине можно приобрести качественные товары для ваших питомцев. Все товары поступают от проверенных поставщиков и имеют сертификат качества. В ассортименте : поводки, ошейники, намордники, переноски для животных, подстилки и наполнитель для туалета, игрушки, корма, лакомство, средства по уходу за животными. Также можно заказать отсутствующий на данный момент товар.'
-            ),
-        )
-    ) );
 
     Redux::setSection( $opt_name, array(
         'title'      => 'Цвета',

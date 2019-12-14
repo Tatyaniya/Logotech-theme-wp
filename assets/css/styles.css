@@ -427,7 +427,7 @@ input:focus {
 
 .yellow-button,
 .offer__link,
-.bestseller__link,
+.bestseller__link a,
 .woman__link,
 .man__link,
 .product__link {
@@ -475,6 +475,7 @@ input:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+          align-items: center;
 }
 
 .header {
@@ -495,7 +496,12 @@ input:focus {
   margin-right: 39px;
 }
 
-.search__input {
+.search .screen-reader-text,
+.search-submit {
+    display: none;
+}
+
+.search-field {
   width: 290px;
   background: transparent url('../img/search.png') no-repeat right center;
   border: none;
@@ -503,7 +509,7 @@ input:focus {
   color: #fff;
 }
 
-.search__input:focus {
+.search-field:focus {
   background-image: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -776,7 +782,7 @@ input:focus {
 
 .popular {
   padding-top: 77px;
-  padding-bottom: 70px;
+  padding-bottom: 10px;
 }
 
 .popular__list {
@@ -784,6 +790,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   margin-right: -88px;
+  padding-bottom: 60px;
 }
 
 .popular__item {
@@ -909,11 +916,11 @@ input:focus {
   margin-bottom: 20px;
 }
 
-.bestseller__link:hover {
+.bestseller__link a:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
-.bestseller__link:before {
+.bestseller__link a:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -929,7 +936,7 @@ input:focus {
   transition: none;
 }
 
-.bestseller__link:hover::before {
+.bestseller__link a:hover::before {
   -webkit-transform: skewX(-45deg) translateX(18.5em);
   -ms-transform: skewX(-45deg) translateX(18.5em);
       transform: skewX(-45deg) translateX(18.5em);
@@ -991,7 +998,7 @@ input:focus {
   -webkit-box-pack: justify;
           justify-content: space-between;
   background: url('../img/w-bg.png') no-repeat center bottom;
-  background-size: cover;
+  background-size: contain;
   margin-bottom: 50px;
 }
 
@@ -1556,10 +1563,15 @@ input:focus {
     margin-right: 0;
   }
 
-  .search__input {
+  .search-field {
     margin-bottom: 10px;
     margin-right: 0;
     border-bottom: 1px solid #fff;
+
+  }
+
+  .search .search-field::placeholder {
+      font-size: 0;
   }
 
   .menu-open .menu__list {

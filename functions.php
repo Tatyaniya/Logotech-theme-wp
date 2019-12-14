@@ -40,7 +40,22 @@ if ( ! function_exists( 'logotech2_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'post-thumbnails' );
+
+        /******************************************************* тумбочки **********************************************************/
+        
+        // размеры для картинок на главной в слайдере
+        add_image_size( 'slider-thumb', 512, 428, true );
+
+        // размеры для баннеров
+        add_image_size( 'banners-thumb', 720, 475, true );
+        
+        // размеры для картинок в категориях
+        add_image_size( 'cat-thumb', 210, 145, true );
+		
+		// размеры для картинок в карточках товаров
+        add_image_size( 'card-thumb', 250, 175, true );
+     ;
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -169,6 +184,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Подключаем метабоксы
+ */
+require get_template_directory() . '/inc/metaboxes.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -189,6 +209,46 @@ require get_template_directory() . '/inc/options-panel-redux.php';
  * @see get_post_type_labels() for label keys.
  */
 function logotech_register_custom_post_type() {
+
+    register_post_type( 'bestseller', array(
+        'labels'             => array(
+            'name'                  => 'Bestseller',
+            'singular_name'         => 'Bestseller',
+            'add_new'               => 'Add new',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'bestseller' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-yes',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
+
+    register_post_type( 'newproduct', array(
+        'labels'             => array(
+            'name'                  => 'New product',
+            'singular_name'         => 'New product',
+            'add_new'               => 'Add new',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'newproduct' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-yes',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
  
     register_post_type( 'drones', array(
         'labels'             => array(
@@ -312,3 +372,98 @@ function logotech_register_custom_post_type() {
 }
  
 add_action( 'init', 'logotech_register_custom_post_type' );
+
+
+
+
+
+
+
+// Метабоксы
+
+// Метабоксы
+function aletheme_metaboxes($meta_boxes) {
+	
+	$meta_boxes = array();
+    $prefix = "logo_";
+   
+    $meta_boxes[] = array(
+        'id'         => 'bestseller_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'bestseller', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'best_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'best_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'best_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'best_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'best_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'best_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'best_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'newproduct_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'newproduct', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'new_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'new_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'new_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'new_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+   
+        
+	return $meta_boxes;
+}

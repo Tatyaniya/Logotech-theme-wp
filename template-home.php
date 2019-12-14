@@ -41,40 +41,40 @@
                 <li class="excellence__item">
                     <div class="excellence__content">
                         <div class="excellence__icon">
-                            <img src="img/exc-icon1.png" alt="icon">
+                            <img src="<?php echo $logotech_options['excellenceimg1']['url']; ?>" alt="icon">
                         </div>
                         <div class="excellence__text">
-                            Sale up to 50%
+                            <?php echo $logotech_options['excellencetext1']; ?>
                         </div>
                     </div>
                 </li>
                 <li class="excellence__item">
                     <div class="excellence__content">
                         <div class="excellence__icon">
-                            <img src="img/exc-icon2.png" alt="icon">
+                            <img src="<?php echo $logotech_options['excellenceimg2']['url']; ?>" alt="icon">
                         </div>
                         <div class="excellence__text">
-                            Fast Delivery
+                            <?php echo $logotech_options['excellencetext2']; ?>
                         </div>
                     </div>
                 </li>
                 <li class="excellence__item">
                     <div class="excellence__content">
                         <div class="excellence__icon">
-                            <img src="img/exc-icon3.png" alt="icon">
+                            <img src="<?php echo $logotech_options['excellenceimg3']['url']; ?>" alt="icon">
                         </div>
                         <div class="excellence__text">
-                            High quality
+                            <?php echo $logotech_options['excellencetext3']; ?>
                         </div>
                     </div>
                 </li>
                 <li class="excellence__item">
                     <div class="excellence__content">
                         <div class="excellence__icon">
-                            <img src="img/exc-icon4.png" alt="icon">
+                            <img src="<?php echo $logotech_options['excellenceimg4']['url']; ?>" alt="icon">
                         </div>
                         <div class="excellence__text">
-                            Customer support 
+                            <?php echo $logotech_options['excellencetext4']; ?>
                         </div>
                     </div>
                 </li>
@@ -98,58 +98,58 @@
     <div class="container popular__container">
         <div class="popular__content">
             <h2 class="popular__title">
-                Popular categories
+                <?php echo $logotech_options['titlepop']; ?>
             </h2>
             <ul class="popular__list">
                 <li class="popular__item">
-                    <a href="#" class="popular__link links">
+                    <a href="<?php echo get_option("siteurl"); ?>/drones/" class="popular__link links">
                         <div class="popular__img">
-                            <img src="img/cat1.png" alt="photo">
+                            <img src="<?php echo $logotech_options['popimg1']['url']; ?>" alt="photo">
                         </div>                            
                         <div class="popular__subtitle">
-                            Drones
+                            <?php echo $logotech_options['poptitle1']; ?>
                         </div>
                         <div class="popular__text">
-                            Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit, sed do<br>  aliqua.
+                            <?php echo $logotech_options['poptext1']; ?>
                         </div>
                     </a>
                 </li>
                 <li class="popular__item">
-                    <a href="#" class="popular__link links">
+                    <a href="<?php echo get_option("siteurl"); ?>/serurity/" class="popular__link links">
                         <div class="popular__img">
-                            <img src="img/cat2.png" alt="photo">
+                            <img src="<?php echo $logotech_options['popimg2']['url']; ?>" alt="photo">
                         </div>
                         <div class="popular__subtitle">
-                            Home security
+                            <?php echo $logotech_options['poptitle2']; ?>
                         </div>
                         <div class="popular__text">
-                            Lorem ipsum dolor sit<br> amet, consectetur<br>  tempor incididunt ut<br> labore et dolore magna<br> aliqua.
+                            <?php echo $logotech_options['poptext2']; ?>
                         </div>
                     </a>
                 </li>
                 <li class="popular__item">
-                    <a href="#" class="popular__link links">
+                    <a href="<?php echo get_option("siteurl"); ?>/smartphone/" class="popular__link links">
                         <div class="popular__img">
-                            <img src="img/cat3.png" alt="photo">
+                            <img src="<?php echo $logotech_options['popimg3']['url']; ?>" alt="photo">
                         </div>
                         <div class="popular__subtitle">
-                            Smart Phone 
+                            <?php echo $logotech_options['poptitle3']; ?>
                         </div>
                         <div class="popular__text">
-                            Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit, sed do<br> eiusmod tempor<br> aliqua.
+                            <?php echo $logotech_options['poptext3']; ?>
                         </div>
                     </a>
                 </li>
                 <li class="popular__item">
-                    <a href="#" class="popular__link links">
+                    <a href="<?php echo get_option("siteurl"); ?>/headphones/" class="popular__link links">
                         <div class="popular__img">
-                            <img src="img/cat4.png" alt="photo">
+                            <img src="<?php echo $logotech_options['popimg4']['url']; ?>" alt="photo">
                         </div>
                         <div class="popular__subtitle">
-                            Headphones
+                            <?php echo $logotech_options['poptitle4']; ?>
                         </div>
                         <div class="popular__text">
-                            Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit, sed do<br> eiusmod tempor<br> incididunt utaliqua. 
+                            <?php echo $logotech_options['poptext4']; ?>
                         </div>
                     </a>
                 </li>
@@ -161,173 +161,86 @@
     <div class="container bestseller__container">
         <div class="bestseller__content">
             <h2 class="bestseller__title">
-                Bestseller
+                <?php echo $logotech_options['title1']; ?>
             </h2>
             <ul class="bestseller__list">
-                <li class="bestseller__item">
-                    <ul class="bestseller__stocks">
-                        <li class="bestseller__best">
-                            Bestseller
-                        </li>
-                        <li class="bestseller__stoc">
-                            Save 15 % 
-                        </li>
-                        <!-- <li class="bestseller__nouv">
-                            Nouveaute 
-                        </li> -->
-                    </ul>
-                    <div class="bestseller__img">
-                        <img src="img/best1.png" alt="photo">
-                    </div>
-                    <div class="bestseller__desc">
-                        HETP Écouteur<br> Bluetooth sans Fil<br> Micro Oreillettes<br> Bluetooth Étanche<br> IPX
-                    </div>
-                    <div class="bestseller__rating">
-                        <img src="img/4.png" alt="rating">
-                    </div>
-                    <div class="bestseller__down">
-                        <div class="aveilable  bestseller__aveilable">
-                            <div class="aveilable__icon">
-                                <img src="img/ok.png" alt="ok">
-                            </div>
-                            <div class="aveilable__text">
-                                Are aveilable
-                            </div>
-                        </div>
-                        <div class="bestseller__old-cost">
-                            £ 99,00
-                        </div>
-                        <div class="bestseller__cost">
-                            £ 49,99 
-                        </div>
-                        <a href="#" class="bestseller__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="bestseller__item">
-                    <ul class="bestseller__stocks">
-                        <li class="bestseller__best">
-                            Bestseller
-                        </li>
-                        <li class="bestseller__stoc">
-                            Save 15 % 
-                        </li>
-                        <!-- <li class="bestseller__nouv">
-                            Nouveaute 
-                        </li> -->
-                    </ul>
-                    <div class="bestseller__img">
-                        <img src="img/best2.png" alt="photo">
-                    </div>
-                    <div class="bestseller__desc">
-                        HETP Écouteur<br> Bluetooth sans Fil<br> Micro Oreillettes<br> Bluetooth Étanche<br> IPX
-                    </div>
-                    <div class="bestseller__down">
-                        <div class="bestseller__rating">
-                            <img src="img/5.png" alt="rating">
-                        </div>
-                        <div class="aveilable  bestseller__aveilable">
-                            <div class="aveilable__icon">
-                                <img src="img/ok.png" alt="ok">
-                            </div>
-                            <div class="aveilable__text">
-                                Are aveilable
-                            </div>
-                        </div>
-                        <div class="bestseller__old-cost">
-                            £ 55,00
-                        </div>
-                        <div class="bestseller__cost">
-                            £ 35,99 
-                        </div>
-                        <a href="#" class="bestseller__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="bestseller__item">
-                    <ul class="bestseller__stocks">
-                        <li class="bestseller__best">
-                            Bestseller
-                        </li>
-                        <li class="bestseller__stoc">
-                            Save 15 % 
-                        </li>
-                        <!-- <li class="bestseller__nouv">
-                            Nouveaute 
-                        </li> -->
-                    </ul>
-                    <div class="bestseller__img">
-                        <img src="img/best3.png" alt="photo">
-                    </div>
-                    <div class="bestseller__desc">
-                        Caméscope K,<br> Caméra vidéo<br> numérique<br> Ultra-HD Ordro K<br> avec Microphone 
-                    </div>
-                    <div class="bestseller__down">
-                        <div class="bestseller__rating">
-                            <img src="img/5.png" alt="rating">
-                        </div>
-                        <div class="aveilable  bestseller__aveilable">
-                            <div class="aveilable__icon">
-                                <img src="img/ok.png" alt="ok">
-                            </div>
-                            <div class="aveilable__text">
-                                Are aveilable
-                            </div>
-                        </div>
-                        <div class="bestseller__old-cost">
-                            £ 125,00
-                        </div>
-                        <div class="bestseller__cost">
-                            £ 149,99 
-                        </div>
-                        <a href="#" class="bestseller__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="bestseller__item">
-                    <ul class="bestseller__stocks">
-                        <li class="bestseller__best">
-                            Bestseller
-                        </li>
-                        <!-- <li class="bestseller__stoc">
-                            Save 15 % 
-                        </li> -->
-                        <li class="bestseller__nouv">
-                            Nouveaute 
-                        </li>
-                    </ul>
-                    <div class="bestseller__img">
-                        <img src="img/best4.png" alt="photo">
-                    </div>
-                    <div class="bestseller__desc">
-                        Nouvel Echo Dot,<br> Enceinte connectée<br> avec horloge et<br> Alexa, Tissu sable
-                    </div>
-                    <div class="bestseller__rating">
-                        <img src="img/4.png" alt="rating">
-                    </div>
-                    <div class="bestseller__down">
-                        <div class="aveilable  bestseller__aveilable">
-                            <div class="aveilable__icon">
-                                <img src="img/ok.png" alt="ok">
-                            </div>
-                            <div class="aveilable__text">
-                                Are aveilable
-                            </div>
-                        </div>
-                        <div class="bestseller__old-cost">
-                            £ 60,00
-                        </div>
-                        <div class="bestseller__cost">
-                            £ 49,99 
-                        </div>
-                        <a href="#" class="bestseller__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
+
+
+                <?php $bestseller = new WP_Query( array(
+                        'post_type' => 'bestseller',
+                        'posts_per_page'=> -1
+                    ));
+                    if ( $bestseller->have_posts() ) :
+                        while ( $bestseller->have_posts() ) :  $bestseller->the_post(); ?>
+
+                            <li class="bestseller__item">
+                                <ul class="bestseller__stocks">
+
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_best',true)) { ?>
+                                        <li class="bestseller__best">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_best_best',true); ?>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_save',true)) { ?>
+                                        <li class="bestseller__stoc">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_best_save',true); ?>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_nouv',true)) { ?>
+                                        <li class="bestseller__nouv">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_best_nouv',true); ?>
+                                        </li>
+                                    <?php } ?>
+
+                                </ul>
+                                <div class="bestseller__img">
+                                    <?php echo get_the_post_thumbnail(get_the_ID(), 'card-thumb'); ?>
+                                </div>
+                                <div class="bestseller__desc">
+                                    <?php the_title(); ?>
+                                </div>
+                                <?php if(get_metadata('post', get_the_ID(),'logo_best_rate',true)) { ?>
+                                    <div class="bestseller__rating">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo get_metadata('post', get_the_ID(),'logo_best_rate',true); ?>.png" alt="rating">
+                                    </div>
+                                <?php } ?>
+                                <div class="bestseller__down">
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_avi',true)) { ?>
+                                        <div class="aveilable  bestseller__aveilable">
+                                            <div class="aveilable__icon">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ok.png" alt="ok">
+                                            </div>
+                                            <div class="aveilable__text">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_best_avi',true); ?>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_old',true)) { ?>
+                                        <div class="bestseller__old-cost">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_best_old',true); ?>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_best_new',true)) { ?>
+                                        <div class="bestseller__cost">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_best_new',true); ?>
+                                        </div>
+                                    <?php } ?>
+                                    
+                                    <div class="bestseller__link">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        <?php endwhile;
+                        
+                        wp_reset_postdata();
+                        
+                    endif;
+                ?>
+            
             </ul>
         </div>
     </div>
@@ -339,14 +252,14 @@
                 <div class="woman__desc">
                     <div class="woman__specification">
                         <div class="woman__subtitle">
-                            Aujourd’hui vous<br> economisez jusqu’a 30%
+                            <?php echo $logotech_options['forwoman']; ?>
                         </div>
                         <a href="#" class="woman__link links">
-                            Shop woman
+                            <?php echo $logotech_options['forwomanlink']; ?>
                         </a>
                     </div>
                     <div class="woman__img">
-                        <img src="img/womans.png" alt="womans">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/womans.png" alt="womans">
                     </div>
                 </div>
                 <ul class="product__list">
@@ -438,14 +351,14 @@
                 <div class="man__desc">
                     <div class="man__specification">
                         <div class="man__subtitle">
-                            Aujourd’hui vous<br> economisez jusqu’a 20%
+                            <?php echo $logotech_options['forman']; ?>
                         </div>
                         <a href="#" class="man__link links">
-                            Shop man
+                            <?php echo $logotech_options['formanlink']; ?>
                         </a>
                     </div>
                     <div class="man__img">
-                        <img src="img/mans.png" alt="man">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mans.png" alt="man">
                     </div>
                 </div>
                 <ul class="product__list">
@@ -540,255 +453,66 @@
     <div class="container new__container">
         <div class="new__content">
             <h2 class="new__title">
-                New product
+                <?php echo $logotech_options['title2']; ?>
             </h2>
             <ul class="product__list new-list">
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p1.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p2.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p3.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/4.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p4.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/3.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p1.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/2.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p2.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/1.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <!-- <div class="product__old-cost">
-                        £ 60,00
-                    </div> -->
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p3.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Caméra de<br> Surveillance WiFi<br> Exterieure, Netvue<br> Full HD 1080P Vidéo<br> Surveillance       
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/0.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 109,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 54,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
-                <li class="product__item">
-                    <div class="product__img">
-                        <img src="img/p4.png" alt="photo">
-                    </div>
-                    <div class="product__description">
-                        Vidéoprojecteur,<br> ELEPHAS<br> Videoprojecteur<br> 4200 Lumens Mini<br> Projecteur Vidéo
-                    </div>
-                    <div class="product__rating">
-                        <img src="img/5.png" alt="rating">
-                    </div>
-                    <div class="aveilable  product__aveilable">
-                        <div class="aveilable__icon">
-                            <img src="img/ok.png" alt="ok">
-                        </div>
-                        <div class="aveilable__text">
-                            Are aveilable
-                        </div>
-                    </div>
-                    <div class="product__old-cost">
-                        £ 60,00
-                    </div>
-                    <div class="product__down">
-                        <div class="product__cost">
-                            £ 129,99 
-                        </div>
-                        <a href="#" class="product__link links">
-                            Learn more
-                        </a>
-                    </div>
-                </li>
+
+                <?php $newproduct = new WP_Query( array(
+                        'post_type' => 'newproduct',
+                        'posts_per_page'=> -1
+                    ));
+                    if ( $newproduct->have_posts() ) :
+                        while ( $newproduct->have_posts() ) :  $newproduct->the_post(); ?>
+
+                            <li class="product__item">
+                                <div class="product__img">
+                                    <?php echo get_the_post_thumbnail(get_the_ID(), 'card-thumb'); ?>
+                                </div>
+                                <div class="product__description">
+                                    <?php the_title(); ?>   
+                                </div>
+                                <?php if(get_metadata('post', get_the_ID(),'logo_new_rate',true)) { ?>
+                                    <div class="product__rating">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo get_metadata('post', get_the_ID(),'logo_new_rate',true); ?>.png" alt="rating">
+                                    </div>
+                                <?php } ?>
+                                <?php if(get_metadata('post', get_the_ID(),'logo_new_avi',true)) { ?>
+                                    <div class="aveilable  product__aveilable">
+                                        <div class="aveilable__icon">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ok.png" alt="ok">
+                                        </div>
+                                        <div class="aveilable__text">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_new_avi',true); ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                                <div class="product__old-cost">
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_new_old',true)) { ?>
+                                        <?php echo get_metadata('post', get_the_ID(),'logo_new_old',true); ?>
+                                    <?php } ?>
+                                </div>
+                                <div class="product__down">
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_new_new',true)) { ?>
+                                        <div class="product__cost">
+                                            <?php echo get_metadata('post', get_the_ID(),'logo_new_new',true); ?>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="product__link">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        <?php endwhile;
+                        
+                        wp_reset_postdata();
+                        
+                    endif;
+                ?>
+               
             </ul>
         </div>
     </div>
 </section>
-
-
-
 
 <?php get_footer();

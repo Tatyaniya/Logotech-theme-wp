@@ -38,7 +38,7 @@
                     <div class="search">
 
                         <?php get_search_form(); ?>
-                        <!-- <input type="text" class="search__input"> -->
+                    
                     </div>
                     <nav class="menu">
                         <div class="humburger">
