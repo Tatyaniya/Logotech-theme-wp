@@ -26,10 +26,7 @@
 	<?php logotech2_post_thumbnail(); ?>
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php logotech2_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->

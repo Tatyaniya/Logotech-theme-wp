@@ -263,88 +263,79 @@
                     </div>
                 </div>
                 <ul class="product__list">
-                    <li class="product__item">
-                        <ul class="product__stocks">
-                            <!-- <li class="product__best">
-                                Bestseller
-                            </li> -->
-                            <li class="product__stoc">
-                                Save 
-                            </li>
-                            <!-- <li class="product__nouv">
-                                Nouveaute 
-                            </li> -->
-                        </ul>
-                        <div class="product__img">
-                            <img src="img/w1.png" alt="photo">
-                        </div>
-                        <div class="product__description">
-                            Veste Hommes Blouson<br> Léger Militaire Veste
-                        </div>
-                        <div class="product__rating">
-                            <img src="img/4.png" alt="rating">
-                        </div>
-                        <div class="product__down">
-                            <div class="aveilable  product__aveilable">
-                                <div class="aveilable__icon">
-                                    <img src="img/ok.png" alt="ok">
-                                </div>
-                                <div class="aveilable__text">
-                                    Are aveilable
-                                </div>
-                            </div>
-                            <div class="product__old-cost">
-                                £ 60,00
-                            </div>
-                            <div class="product__cost">
-                                £ 49,99 
-                            </div>
-                            <a href="#" class="product__link links">
-                                View deal
-                            </a>
-                        </div>
-                    </li>
-                    <li class="product__item">
-                        <ul class="product__stocks">
-                            <li class="product__best">
-                                Bestseller
-                            </li>
-                            <!-- <li class="product__stoc">
-                                Save 
-                            </li> -->
-                            <li class="product__nouv">
-                                Nouveaute 
-                            </li>
-                        </ul>
-                        <div class="product__img">
-                            <img src="img/w2.png" alt="photo">
-                        </div>
-                        <div class="product__description">
-                            Veste Hommes Blouson<br> Léger Militaire Veste
-                        </div>
-                        <div class="product__rating">
-                            <img src="img/5.png" alt="rating">
-                        </div>
-                        <div class="product__down">
-                            <div class="aveilable  product__aveilable">
-                                <div class="aveilable__icon">
-                                    <img src="img/ok.png" alt="ok">
-                                </div>
-                                <div class="aveilable__text">
-                                    Are aveilable
-                                </div>
-                            </div>
-                            <div class="product__old-cost">
-                                £ 60,00
-                            </div>
-                            <div class="product__cost">
-                                £ 49,99 
-                            </div>
-                            <a href="#" class="product__link links">
-                                View deal
-                            </a>
-                        </div>
-                    </li>
+
+                    <?php $womanhome = new WP_Query( array(
+                            'post_type' => 'womanhome',
+                            'posts_per_page'=> -1
+                        ));
+                        if ( $womanhome->have_posts() ) :
+                            while ( $womanhome->have_posts() ) :  $womanhome->the_post(); ?>
+
+                                <li class="product__item">
+                                    <ul class="bestseller__stocks">
+
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_best',true)) { ?>
+                                            <li class="bestseller__best">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_best',true); ?>
+                                            </li>
+                                        <?php } ?>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_save',true)) { ?>
+                                            <li class="bestseller__stoc">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_save',true); ?>
+                                            </li>
+                                        <?php } ?>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_nouv',true)) { ?>
+                                            <li class="bestseller__nouv">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_nouv',true); ?>
+                                            </li>
+                                        <?php } ?>
+
+                                    </ul>
+                                    <div class="product__img">
+                                        <?php echo get_the_post_thumbnail(get_the_ID(), 'card-thumb'); ?>
+                                    </div>
+                                    <div class="product__description">
+                                        <?php the_title(); ?>   
+                                    </div>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_rate',true)) { ?>
+                                        <div class="product__rating">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo get_metadata('post', get_the_ID(),'logo_womanhome_rate',true); ?>.png" alt="rating">
+                                        </div>
+                                    <?php } ?>
+                                    <div class="product__down">
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_avi',true)) { ?>
+                                            <div class="aveilable  product__aveilable">
+                                                <div class="aveilable__icon">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ok.png" alt="ok">
+                                                </div>
+                                                <div class="aveilable__text">
+                                                    <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_avi',true); ?>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="product__old-cost">
+                                            <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_old',true)) { ?>
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_old',true); ?>
+                                            <?php } ?>
+                                        </div>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_womanhome_new',true)) { ?>
+                                            <div class="product__cost">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_womanhome_new',true); ?>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="product__link">
+                                            <?php the_content(); ?>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            <?php endwhile;
+                            
+                            wp_reset_postdata();
+                            
+                        endif;
+                    ?>
+                    
                 </ul>
             </div>
             <div class="man">
@@ -362,88 +353,79 @@
                     </div>
                 </div>
                 <ul class="product__list">
-                    <li class="product__item">
-                        <ul class="product__stocks">
-                            <!-- <li class="product__best">
-                                Bestseller
-                            </li> -->
-                            <li class="product__stoc">
-                                Save 
-                            </li>
-                            <!-- <li class="product__nouv">
-                                Nouveaute 
-                            </li> -->
-                        </ul>
-                        <div class="product__img">
-                            <img src="img/m1.png" alt="photo">
-                        </div>
-                        <div class="product__description">
-                            Veste Hommes Blouson<br> Léger Militaire Veste
-                        </div>
-                        <div class="product__rating">
-                            <img src="img/5.png" alt="rating">
-                        </div>
-                        <div class="product__down">
-                            <div class="aveilable  product__aveilable">
-                                <div class="aveilable__icon">
-                                    <img src="img/ok.png" alt="ok">
-                                </div>
-                                <div class="aveilable__text">
-                                    Are aveilable
-                                </div>
-                            </div>
-                            <div class="product__old-cost">
-                                £ 60,00
-                            </div>
-                            <div class="product__cost">
-                                £ 49,99 
-                            </div>
-                            <a href="#" class="product__link links">
-                                View deal
-                            </a>
-                        </div>
-                    </li>
-                    <li class="product__item">
-                        <ul class="product__stocks">
-                            <li class="product__best">
-                                Bestseller
-                            </li>
-                            <!-- <li class="product__stoc">
-                                Save 
-                            </li> -->
-                            <li class="product__nouv">
-                                Nouveaute 
-                            </li>
-                        </ul>
-                        <div class="product__img">
-                            <img src="img/m2.png" alt="photo">
-                        </div>
-                        <div class="product__description">
-                            Veste Hommes Blouson<br> Léger Militaire Veste
-                        </div>
-                        <div class="product__rating">
-                            <img src="img/5.png" alt="rating">
-                        </div>
-                        <div class="product__down">
-                            <div class="aveilable  product__aveilable">
-                                <div class="aveilable__icon">
-                                    <img src="img/ok.png" alt="ok">
-                                </div>
-                                <div class="aveilable__text">
-                                    Are aveilable
-                                </div>
-                            </div>
-                            <div class="product__old-cost">
-                                £ 60,00
-                            </div>
-                            <div class="product__cost">
-                                £ 49,99 
-                            </div>
-                            <a href="#" class="product__link links">
-                                View deal
-                            </a>
-                        </div>
-                    </li>
+
+                <?php $manhome = new WP_Query( array(
+                            'post_type' => 'manhome',
+                            'posts_per_page'=> -1
+                        ));
+                        if ( $manhome->have_posts() ) :
+                            while ( $manhome->have_posts() ) :  $manhome->the_post(); ?>
+
+                                <li class="product__item">
+                                    <ul class="bestseller__stocks">
+
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_manhome_best',true)) { ?>
+                                            <li class="bestseller__best">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_manhome_best',true); ?>
+                                            </li>
+                                        <?php } ?>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_manhome_save',true)) { ?>
+                                            <li class="bestseller__stoc">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_manhome_save',true); ?>
+                                            </li>
+                                        <?php } ?>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_manhome_nouv',true)) { ?>
+                                            <li class="bestseller__nouv">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_manhome_nouv',true); ?>
+                                            </li>
+                                        <?php } ?>
+
+                                    </ul>
+                                    <div class="product__img">
+                                        <?php echo get_the_post_thumbnail(get_the_ID(), 'card-thumb'); ?>
+                                    </div>
+                                    <div class="product__description">
+                                        <?php the_title(); ?>   
+                                    </div>
+                                    <?php if(get_metadata('post', get_the_ID(),'logo_manhome_rate',true)) { ?>
+                                        <div class="product__rating">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo get_metadata('post', get_the_ID(),'logo_manhome_rate',true); ?>.png" alt="rating">
+                                        </div>
+                                    <?php } ?>
+                                    <div class="product__down">
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_manhome_avi',true)) { ?>
+                                            <div class="aveilable  product__aveilable">
+                                                <div class="aveilable__icon">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ok.png" alt="ok">
+                                                </div>
+                                                <div class="aveilable__text">
+                                                    <?php echo get_metadata('post', get_the_ID(),'logo_manhome_avi',true); ?>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="product__old-cost">
+                                            <?php if(get_metadata('post', get_the_ID(),'logo_manhome_old',true)) { ?>
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_manhome_old',true); ?>
+                                            <?php } ?>
+                                        </div>
+                                        <?php if(get_metadata('post', get_the_ID(),'logo_manhome_new',true)) { ?>
+                                            <div class="product__cost">
+                                                <?php echo get_metadata('post', get_the_ID(),'logo_manhome_new',true); ?>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="product__link">
+                                            <?php the_content(); ?>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            <?php endwhile;
+                            
+                            wp_reset_postdata();
+                            
+                        endif;
+                    ?>
+                    
                 </ul>
             </div>
         </div>

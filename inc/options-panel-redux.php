@@ -659,6 +659,22 @@
     ) );
 
     Redux::setSection( $opt_name, array(
+        'title'            => 'Подписка',
+        'id'               => 'subscribe',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'desc'             => 'Редактирование заголовка формы подписки',
+        'fields'           => array(
+            array(
+                'id'       => 'titlesubscribe',
+                'type'     => 'text',
+                'title'    => 'Заголовок',
+                'default'  => ''
+            ),
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
         'title'            => 'Контакты',
         'id'               => 'contacts',
         'subsection'       => true,
@@ -761,44 +777,39 @@
         )
     ) );
 
-
     Redux::setSection( $opt_name, array(
-        'title'      => 'Цвета',
-        'id'         => 'color-Color',
-        'desc'       => 'Здесь можно задать цвета',
-        'fields'     => array(
+        'title'            => 'Платежи',
+        'id'               => 'paymentfooter',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'desc'             => 'Редактирование блока платежей',
+        'fields'           => array(
             array(
-                'id'       => 'opt-color-header',
-                'type'     => 'color',
-                'title'    => 'Верхенее меню',
-                'default'  => '#1fb0c3',
-                'validate' => 'color',
+                'id'       => 'titlepayment',
+                'type'     => 'text',
+                'title'    => 'Заголовок',
+                'default'  => ''
             ),
             array(
-                'id'       => 'opt-color-links',
-                'type'     => 'color',
-                'title'    => 'Кнопочки второго меню',
-                'default'  => '#1fb0c3',
-                'validate' => 'color',
+                'id'       => 'visapayment',
+                'type'     => 'text',
+                'title'    => 'Visa',
+                'default'  => ''
             ),
             array(
-                'id'       => 'opt-color-titles',
-                'type'     => 'color',
-                'title'    => 'Заголовки',
-                'default'  => '#1c9bac',
-                'validate' => 'color',
+                'id'       => 'paypalpayment',
+                'type'     => 'text',
+                'title'    => 'PayPal',
+                'default'  => ''
             ),
             array(
-                'id'       => 'opt-color-footer',
-                'type'     => 'color',
-                'title'    => 'Подвал',
-                'default'  => '#188998',
-                'validate' => 'color',
+                'id'       => 'masterpayment',
+                'type'     => 'text',
+                'title'    => 'Master',
+                'default'  => ''
             ),
-        ),
+        )
     ) );
-
-
 
 /*
 

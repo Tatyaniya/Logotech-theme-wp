@@ -226,7 +226,47 @@ function logotech_register_custom_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'menu_icon'			 => 'dashicons-yes',
+        'menu_icon'			 => 'dashicons-admin-home',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
+
+    register_post_type( 'womanhome', array(
+        'labels'             => array(
+            'name'                  => 'For Her Home Page',
+            'singular_name'         => 'For Her Home Page',
+            'add_new'               => 'Add new',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'womanhome' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-admin-home',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
+
+    register_post_type( 'manhome', array(
+        'labels'             => array(
+            'name'                  => 'For Him Home Page',
+            'singular_name'         => 'For Him Home Page',
+            'add_new'               => 'Add new',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'manhome' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-admin-home',
         'supports'           => array( 'title', 'editor','thumbnail' ),
     ) );
 
@@ -246,7 +286,7 @@ function logotech_register_custom_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'menu_icon'			 => 'dashicons-yes',
+        'menu_icon'			 => 'dashicons-admin-home',
         'supports'           => array( 'title', 'editor','thumbnail' ),
     ) );
  
@@ -735,6 +775,98 @@ function aletheme_metaboxes($meta_boxes) {
             array(
                 'name' => 'new price',
                 'id'   => $prefix . 'man_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'womanhome_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'womanhome', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'womanhome_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'womanhome_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'womanhome_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'womanhome_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'womanhome_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'womanhome_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'womanhome_new',
+                'type' => 'text',
+            ),      
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'manhome_metaboxes',
+        'title'      => ' ',
+        'pages'      => array( 'manhome', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true,
+        'fields' => array(
+            array(
+                'name' => 'bestseller',
+                'id'   => $prefix . 'manhome_best',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'save',
+                'id'   => $prefix . 'manhome_save',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'nouveaute',
+                'id'   => $prefix . 'manhome_nouv',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'rating',
+                'id'   => $prefix . 'manhome_rate',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'aviable',
+                'id'   => $prefix . 'manhome_avi',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'old price',
+                'id'   => $prefix . 'manhome_old',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'new price',
+                'id'   => $prefix . 'manhome_new',
                 'type' => 'text',
             ),      
         )

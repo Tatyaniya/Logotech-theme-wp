@@ -341,8 +341,43 @@ body {
   overflow-X: hidden;
 }
 
+.primary__container {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: 49vh;
+    text-align: center;
+}
+
+.content-area {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 49vh;
+}
+
+.content-area .page-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-content__maybe {
+    margin-bottom: 35px;
+}
+
+.menu-not-found__item {
+    margin-bottom: 10px;
+}
+
+.menu-not-found__link {
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+}
+
+.menu-not-found__link:hover {
+    border-bottom: 1px solid #000;
+}
+
 .new__content {
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .sg-row {
@@ -1201,7 +1236,7 @@ input:focus {
   margin-right: 90px;
 }
 
-.subscribe__form {
+.subscribe__form .mc4wp-form-fields {
   display: -webkit-box;
   display: flex;
   width: 780px;

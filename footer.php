@@ -17,13 +17,10 @@ global $logotech_options;
         <div class="container subscribe__container">
             <div class="subscribe__content">
                 <h3 class="subscribe__title">
-                    Sign Up For Newsletter
+                    <?php echo $logotech_options['titlesubscribe']; ?>
                 </h3>
                 <form action="#" class="subscribe__form">
-                    <input type="text" class="subscribe__input" placeholder="Your email address">
-                    <button class="subscribe__btt">
-                        SUBSCRIBE
-                    </button>
+                    <?php echo do_shortcode('[mc4wp_form id="65"]'); ?>
                 </form>
             </div>
         </div>
@@ -89,36 +86,46 @@ global $logotech_options;
                     <?php } ?>
                     
                     <ul class="footer__list">
-                        <li class="footer__item">
-                            <div class="social">
-                                <div class="social__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.png" alt="youtube">
+
+                        <?php if($logotech_options['youtubelink']) { ?>
+                            <li class="footer__item">
+                                <div class="social">
+                                    <div class="social__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.png" alt="youtube">
+                                    </div>
+                                    <a href="<?php echo $logotech_options['youtubelink']; ?>" class="social__text" target="_blank">
+                                        <?php echo $logotech_options['youtube']; ?>
+                                    </a>
                                 </div>
-                                <a href="#" class="social__text" target="_blank">
-                                    youtube
-                                </a>
-                            </div>
-                        </li>
-                        <li class="footer__item">
-                            <div class="social">
-                                <div class="social__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="instagram">
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['instagramlink']) { ?>
+                            <li class="footer__item">
+                                <div class="social">
+                                    <div class="social__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="instagram">
+                                    </div>
+                                    <a href="<?php echo $logotech_options['instagramlink']; ?>" class="social__text" target="_blank">
+                                        <?php echo $logotech_options['instagram']; ?>
+                                    </a>
                                 </div>
-                                <a href="#" class="social__text" target="_blank">
-                                    instagram
-                                </a>
-                            </div>
-                        </li>
-                        <li class="footer__item">
-                            <div class="social">
-                                <div class="social__icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.png" alt="facebook">
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['facebooklink']) { ?>
+                            <li class="footer__item">
+                                <div class="social">
+                                    <div class="social__icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.png" alt="facebook">
+                                    </div>
+                                    <a href="<?php echo $logotech_options['facebooklink']; ?>" class="social__text" target="_blank">
+                                        <?php echo $logotech_options['facebook']; ?>
+                                    </a>
                                 </div>
-                                <a href="#" class="social__text" target="_blank">
-                                    facebook
-                                </a>
-                            </div>
-                        </li>
+                            </li>
+                        <?php } ?>
+                        
                     </ul>
                 </div>
 
@@ -156,31 +163,38 @@ global $logotech_options;
 
                 <div class="footer__box">
 
-                    <?php if($logotech_options['titlecontact']) { ?>
+                    <?php if($logotech_options['titlepayment']) { ?>
                         <h4 class="footer__title">
-                            <?php echo $logotech_options['titlecontact']; ?>
+                            <?php echo $logotech_options['titlepayment']; ?>
                         </h4>
                     <?php } ?>
 
-                    <h4 class="footer__title">
-                        PAYMENT
-                    </h4>
                     <ul class="footer__list">
-                        <li class="footer__item">
-                            <div class="footer__text">
-                                Visa                                        
-                            </div>
-                        </li>
-                        <li class="footer__item">
-                            <div class="footer__text">
-                                PayPal                                         
-                            </div>
-                        </li>
-                        <li class="footer__item">
-                            <div class="footer__text">  
-                                Master                                         
-                            </div>
-                        </li>
+
+                        <?php if($logotech_options['visapayment']) { ?>
+                            <li class="footer__item">
+                                <div class="footer__text">
+                                    <?php echo $logotech_options['visapayment']; ?>                                   
+                                </div>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['paypalpayment']) { ?>
+                            <li class="footer__item">
+                                <div class="footer__text">
+                                    <?php echo $logotech_options['paypalpayment']; ?>                                   
+                                </div>
+                            </li>
+                        <?php } ?>
+
+                        <?php if($logotech_options['masterpayment']) { ?>
+                            <li class="footer__item">
+                                <div class="footer__text">
+                                    <?php echo $logotech_options['masterpayment']; ?>                                   
+                                </div>
+                            </li>
+                        <?php } ?>
+                        
                     </ul>
                 </div>
             </div>
