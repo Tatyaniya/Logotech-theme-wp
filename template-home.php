@@ -85,12 +85,26 @@
 <section class="sale">
     <div class="container sale__container">
         <div class="sale__content">
-            <a href="#" class="sale__link">
-                <img src="img/y.jpg" alt="Sale">
-            </a>
-            <a href="#" class="sale__link">
-                <img src="img/k.jpg" alt="Sale">
-            </a>
+
+            <?php $banners = new WP_Query( array(
+                    'post_type' => 'banners',
+                    'posts_per_page'=> 2,
+                ));
+                if ( $banners->have_posts() ) :
+                    while ( $banners->have_posts() ) :  $banners->the_post(); ?>
+
+                        <div class="sale__link">
+                            <?php echo the_content(); ?>
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'banners-thumb'); ?>
+                        </div>                    
+
+                    <?php endwhile;
+                    
+                    wp_reset_postdata();
+                    
+                endif;
+            ?>
+            
         </div>
     </div>
 </section>

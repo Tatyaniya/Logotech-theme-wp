@@ -210,6 +210,27 @@ require get_template_directory() . '/inc/options-panel-redux.php';
  */
 function logotech_register_custom_post_type() {
 
+    register_post_type( 'banners', array(
+        'labels'             => array(
+            'name'                  => 'Banners',
+            'singular_name'         => 'Banners',
+            'add_new'               => 'Add new',
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'banners' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'			 => 'dashicons-admin-home',
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+    ) );
+
+
     register_post_type( 'bestseller', array(
         'labels'             => array(
             'name'                  => 'Bestseller',
