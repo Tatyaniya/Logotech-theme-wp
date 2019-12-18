@@ -14,7 +14,8 @@ get_header();
 
                 <?php $serurity = new WP_Query( array(
                         'post_type' => 'serurity',
-                        'posts_per_page'=> -1
+                        //'posts_per_page'=> -1,
+                        'paged' => $paged
                     ));
                     if ( $serurity->have_posts() ) :
                         while ( $serurity->have_posts() ) :  $serurity->the_post(); ?>
@@ -85,6 +86,7 @@ get_header();
                 ?>
               
             </ul>
+            <?php kama_pagenavi(); ?>
         </div>
     </div>
 </section>

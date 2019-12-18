@@ -14,7 +14,8 @@ get_header();
 
                 <?php $headphones = new WP_Query( array(
                         'post_type' => 'headphones',
-                        'posts_per_page'=> -1
+                        //'posts_per_page'=> -1,
+                        'paged' => $paged
                     ));
                     if ( $headphones->have_posts() ) :
                         while ( $headphones->have_posts() ) :  $headphones->the_post(); ?>
@@ -85,6 +86,7 @@ get_header();
                 ?>
               
             </ul>
+            <?php kama_pagenavi(); ?>
         </div>
     </div>
 </section>

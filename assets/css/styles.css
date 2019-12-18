@@ -1,3 +1,18 @@
+/* Pagenavi */
+.wp-pagenavi{ margin:2em auto; text-align:center; }
+.wp-pagenavi > *{ display:inline-block; padding:.0em .5em; margin:.1em; border:1px solid #93a8bc; color:#465366; }
+.wp-pagenavi a,
+	.wp-pagenavi a:hover{ text-decoration:none; }
+.wp-pagenavi a{ background-color: #FFFFFF; }
+.wp-pagenavi a:hover{ border-color:#7d95ac; }
+.wp-pagenavi .pages{ }
+.wp-pagenavi .current{ border-color:#465366; color: #465366; }
+.wp-pagenavi .extend{ color: #465366; }
+.wp-pagenavi .first{  }
+.wp-pagenavi .last{  }
+.wp-pagenavi .prev{ border-color:rgba(0,0,0,0); }
+.wp-pagenavi .next{ border-color:rgba(0,0,0,0); }
+
 /* Dots */
 .slick-dotted.slick-slider
 {

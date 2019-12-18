@@ -14,7 +14,8 @@ get_header();
 
                 <?php $smartphone = new WP_Query( array(
                         'post_type' => 'smartphone',
-                        'posts_per_page'=> -1
+                        //'posts_per_page'=> -1,
+                        'paged' => $paged
                     ));
                     if ( $smartphone->have_posts() ) :
                         while ( $smartphone->have_posts() ) :  $smartphone->the_post(); ?>
@@ -85,6 +86,7 @@ get_header();
                 ?>
               
             </ul>
+            <?php kama_pagenavi(); ?>
         </div>
     </div>
 </section>

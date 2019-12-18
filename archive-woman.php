@@ -14,7 +14,8 @@ get_header();
 
                 <?php $woman = new WP_Query( array(
                         'post_type' => 'woman',
-                        'posts_per_page'=> -1
+                        //'posts_per_page'=> -1,
+                        'paged' => $paged
                     ));
                     if ( $woman->have_posts() ) :
                         while ( $woman->have_posts() ) :  $woman->the_post(); ?>
@@ -85,6 +86,7 @@ get_header();
                 ?>
               
             </ul>
+            <?php kama_pagenavi(); ?>
         </div>
     </div>
 </section>

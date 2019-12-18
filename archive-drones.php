@@ -14,7 +14,8 @@ get_header();
 
                 <?php $drones = new WP_Query( array(
                         'post_type' => 'drones',
-                        'posts_per_page'=> -1
+                        //'posts_per_page'=> -1,
+                        'paged' => $paged
                     ));
                     if ( $drones->have_posts() ) :
                         while ( $drones->have_posts() ) :  $drones->the_post(); ?>
@@ -82,10 +83,13 @@ get_header();
                         wp_reset_postdata();
                         
                     endif;
-                ?>
+
+                ?>      
               
             </ul>
-        </div>
+            
+            <?php kama_pagenavi(); ?>
+        </div>        
     </div>
 </section>
 
