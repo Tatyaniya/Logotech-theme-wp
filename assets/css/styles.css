@@ -831,7 +831,6 @@ input:focus {
 .sale__link {
   width: 720px;
   height: 475px;
-  background: #ccc;
   position: relative;
 }
 
@@ -1521,7 +1520,15 @@ input:focus {
   }
 
   .subscribe__form {
+      width: 100%;
+  }
+
+  .subscribe__form .mc4wp-form-fields {
     width: 100%;
+  }
+
+  .subscribe__form .mc4wp-form-fields input.subscribe__input {
+    width: 90%;
   }
 }
 
@@ -1703,7 +1710,7 @@ input:focus {
 }
 
 @media screen and (max-width: 420px) {
-  .subscribe__form {
+  .subscribe__form .mc4wp-form-fields {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
