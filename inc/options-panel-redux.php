@@ -443,30 +443,6 @@
         )
     ) );
 
-    // Баннеры
-    Redux::setSection( $opt_name, array(
-        'title'            => 'Баннеры',
-        'id'               => 'banners',
-        'subsection'       => true,
-        'customizer_width' => '450px',
-        'fields'           => array(
-            array(
-                'id'       => 'banner1',
-                'type'     => 'media',
-                'title'    => 'Баннер 1',
-                'desc'     => 'Загрузите картинку размером не меньше 720х475',
-                'default'  => ''
-            ),
-            array(
-                'id'       => 'banner2',
-                'type'     => 'media',
-                'title'    => 'Баннер 2',
-                'desc'     => 'Загрузите картинку размером не меньше 720х475',
-                'default'  => ''
-            ),
-        )
-    ) );
-
 
     // Популярные категории
     Redux::setSection( $opt_name, array(

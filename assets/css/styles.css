@@ -937,6 +937,7 @@ input:focus {
 .bestseller__item {
   width: 309px;
   margin-right: 80px;
+  margin-bottom: 48px;
 }
 
 .bestseller__img {
@@ -1403,10 +1404,6 @@ input:focus {
     text-align: center;
   }
 
-  .bestseller__item {
-    margin-bottom: 48px;
-  }
-
   .dress__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1561,8 +1558,7 @@ input:focus {
   }
 
   .excellence__content {
-    -webkit-box-pack: center;
-            justify-content: center;
+    padding-left: 31%;
   }
 
   .sale__link {
@@ -1646,10 +1642,6 @@ input:focus {
 
   }
 
-  .search .search-field::placeholder {
-      font-size: 0;
-  }
-
   .menu-open .menu__list {
     left: -36px;
   }
@@ -1710,6 +1702,10 @@ input:focus {
 }
 
 @media screen and (max-width: 420px) {
+    .excellence__content {
+        padding-left: 21%;
+    }
+
   .subscribe__form .mc4wp-form-fields {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
